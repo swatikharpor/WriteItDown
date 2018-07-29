@@ -27,7 +27,7 @@ widgets:{};
 
     },
     {
-      nodeType:'Dpcument',
+      nodeType:'Document',
       count:'10',
       bgColor:'#d9544f'
     }];
