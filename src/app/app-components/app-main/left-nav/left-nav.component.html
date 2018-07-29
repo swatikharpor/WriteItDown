@@ -1,0 +1,11 @@
+<ul class= "left-nav-wrapper"*ngIf="showLeftNav && leftNavMenu.length > 0">
+  
+  <li *ngFor="let leftMenu of leftNavMenu" [ngClass]="{'selected' : leftMenu === selectedLeftNav}" (click)="onItemClick(leftMenu.menuName)">
+    {{leftMenu.menuName}}
+    <ul *ngIf="leftMenu.subMenu.length > 0">
+      <li *ngFor="let subMenu of leftMenu.subMenu" (click)="onItemClick(leftMenu.menuName)" (click)="onSubItemClick(subMenu.name)">
+        {{subMenu.name}}
+      </li>
+    </ul>
+  </li>
+</ul>
